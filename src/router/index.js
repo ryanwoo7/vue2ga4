@@ -12,6 +12,7 @@ import AirPodsDetails from "../components/Music/GoodsShow/AirPods Pro/AirPodsDet
 Vue.use(VueRouter)
 
 var router=new VueRouter({
+    base:'/ga/',
     routes:[
         {
             path:'/',
@@ -44,7 +45,6 @@ var router=new VueRouter({
 
     ],
     mode:'history'
-    
 })
 
 // 经验证，这个路由守卫没什么用，因为vue-router在跳转的路径相同的时候，在执行这个路由守卫之前就拦截了
