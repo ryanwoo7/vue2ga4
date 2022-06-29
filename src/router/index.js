@@ -12,7 +12,7 @@ import AirPodsDetails from "../components/Music/GoodsShow/AirPods Pro/AirPodsDet
 Vue.use(VueRouter)
 
 var router=new VueRouter({
-    base:'/ga/',
+    base:'/vue2ga4/',
     routes:[
         {
             path:'/',

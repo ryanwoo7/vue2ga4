@@ -3,11 +3,14 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import VueAnalytics from 'vue-analytics'
+// import VueAnalytics from 'vue-analytics'
+import VueGtag from 'vue-gtag'
 
 Vue.config.productionTip = false
-
-// GA初始化
+Vue.use(VueGtag, {
+  config: { id: "G-QR323DRMSZ" }
+}, router);
+/* // GA初始化
 if (process.env.GA) {
   Vue.use(VueAnalytics, {
     id: process.env.GA, // 从配置中读取
@@ -17,7 +20,7 @@ if (process.env.GA) {
       pageviewOnLoad: false // 当通过网址进来时已经GA在初始化时就发起一次pageview的统计，这里不要重复统计
     }
   })
-}
+} */
 
 /* eslint-disable no-new */
 new Vue({
